@@ -16,25 +16,25 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x722: file p1original.c, line 3.
+Breakpoint 1 at 0x7fc: file p1original.c, line 16.
 (gdb) r
-Starting program: /home/runner/pps-IA1-practice/a.out 
+Starting program: /home/runner/pps-IA1-practice-1/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p1original.c:3
-3   {
+Breakpoint 1, main () at p1original.c:16
+16  {
 (gdb) n
-5     printf("enter 2 numbers:");
+18    input(&x,&y);
 (gdb) n
-6     scanf("%f %f",&a,&b);
+enter 2 numbers
+2 4
+19    add(x,y,&z);
 (gdb) n
-enter 2 numbers:2 4 
-7     c=a+b;
+20    output(x,y,z);
 (gdb) n
-8     printf("a and b is %f",c);
-(gdb) n
-10    return 0;
+21    return 0;
 (gdb) c
 Continuing.
-a and b is 6.000000[Inferior 1 (process 116) exited normally]
+sum of a+b is 2+4=6[Inferior 1 (process 105) exited normally]
+(gdb) Quit
 (gdb) 
