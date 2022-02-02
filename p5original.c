@@ -1,37 +1,33 @@
 #include<stdio.h>
-int input()
+float input()
 {
-  int a;
-  printf("enter a number:");
-  scanf("%d",&a);
+  float a;
+  printf("Enter the number\n");
+  scanf("%f",&a);
   return a;
 }
-int emp(int a,int b,int c)
+float sqr_root(float n)
 {
-  if(a>b && b>c)
-  {
-    return a;
-  }
-else if(b>a && b>c)
+  float temp,sqrt;
+  sqrt=n/2;
+  temp=0;
+   while(sqrt !=temp)
+   {
+     temp=sqrt;
+     sqrt=(n/temp+temp)/2;
+   }
+   return sqrt;
+}
+void output(float n,float sqrt)
 {
-  return b;
+  printf("Square root is %f",sqrt);
 }
-else
-{
-  return c;
-}
-}
-void output(int a,int b,int c,int d)
-{
-  printf("from the given numbers %d,%d,%d.%d is the greatest",a,b,c,d);
-}
-int main()
-{
-  int a,b,c,d;
-  a=input();
-  b=input();
-  c=input();
-  d=emp(a,b,c);
-  output(a,b,c,d);
-  return 0;
-}
+ int main()
+ {
+    float n,temp,sqrt;
+    n=input();
+    temp=sqr_root(n);
+    sqrt=sqr_root(n);
+    output(n,sqrt);
+    return 0;
+ }

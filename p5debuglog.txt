@@ -16,28 +16,24 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x7f0: file p5original.c, line 31.
+Breakpoint 1 at 0x864: file p5original.c, line 28.
 (gdb) r
-Starting program: /home/runner/pps-IA1-practice/a.out 
+Starting program: /home/runner/pps-IA1-practice-1/a.out 
 warning: Error disabling address space randomization: Operation not permitted
-n
 
-Breakpoint 1, main () at p5original.c:31
-31    a=input();
+Breakpoint 1, main () at p5original.c:28
+28      n=input();
 (gdb) n
-enter a number:5
-32    b=input();
+Enter the number
+2
+29      temp=sqr_root(n);
 (gdb) n
-enter a number:7
-33    c=input();
+30      sqrt=sqr_root(n);
 (gdb) n
-enter a number:6
-34    d=emp(a,b,c);
+31      output(n,sqrt);
 (gdb) n
-35    output(a,b,c,d);
-(gdb) n
-36    return 0;
+32      return 0;
 (gdb) c
 Continuing.
-from the given numbers 5,7,6.7 is the greatest[Inferior 1 (process 633) exited normally]
+Square root is 1.414214[Inferior 1 (process 539) exited normally]
 (gdb) 
